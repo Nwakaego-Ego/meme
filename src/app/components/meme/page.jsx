@@ -48,24 +48,6 @@ const memes = () => {
         </div>
 
         <div className="grid-container">
-          {/* {Array.from({ length: 20 }, (_, index) => (       ))}
-          <div key={index} className="grid-item">
-            {memes[index] && (
-              <>
-                <img src={memes[index].image} alt={`Meme ${index + 1}`} />
-                {memes[index].category}
-              </>
-            )}
-          </div> */}
-          {/* {filteredMeme.map((meme, index) => {
-            return (
-              <div key={index} className="grid-item">
-                <img src={meme.image} alt={`meme ${index + 1}`} />
-                {meme.category}
-              </div>
-            );
-          })} */}
-
           {filteredMeme.length > 0 ? (
             filteredMeme.map((meme, index) => (
               <div key={index} className="grid-item">
@@ -74,7 +56,13 @@ const memes = () => {
               </div>
             ))
           ) : (
-            <div className="error-message">Input correct meme</div>
+            <div className="error-message flex flex-col items-center justify-center text-center text-4xl font-bold text-red-500 p-8 bg-gray-200 rounded-md shadow-md ml-[350px]">
+              <span className="mb-4">Oops! No meme found</span>
+              <div className="w-16 h-1 bg-red-500 rounded-full"></div>
+              <span className="mt-4 text-sm text-gray-600">
+                Please try again later
+              </span>
+            </div>
           )}
         </div>
       </div>
@@ -83,3 +71,25 @@ const memes = () => {
 };
 
 export default memes;
+
+{
+  /* {Array.from({ length: 20 }, (_, index) => (       ))}
+          <div key={index} className="grid-item">
+            {memes[index] && (
+              <>
+                <img src={memes[index].image} alt={`Meme ${index + 1}`} />
+                {memes[index].category}
+              </>
+            )}
+          </div> */
+}
+{
+  /* {filteredMeme.map((meme, index) => {
+            return (
+              <div key={index} className="grid-item">
+                <img src={meme.image} alt={`meme ${index + 1}`} />
+                {meme.category}
+              </div>
+            );
+          })} */
+}
