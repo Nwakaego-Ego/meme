@@ -6,7 +6,7 @@ import "./upload.css";
 
 const upload = () => {
   const [imageUpload, setImageUpload] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
+  const [imageData, setImageData] = useState([]);
 
   const imageListRef = ref(storage, "images/");
 
@@ -15,7 +15,10 @@ const upload = () => {
     const imageRef = ref(storage, `images/${imageUpload.name}`);
     uploadBytes(imageRef, imageUpload).then((snapshoot) => {
       getDownloadURL(snapshoot.ref).then((url) => {
-        setImageUrls((prev) => [...prev, url]);
+        setImageData((prev) => [
+          ...prev,
+          { name: getImageName(imageUpload.name, url) },
+        ]);
       });
     });
   };
@@ -24,11 +27,18 @@ const upload = () => {
     listAll(imageListRef).then((response) => {
       response.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
+          setImageData((prev) => [
+            ...prev,
+            { name: getImageName(item.name, url) },
+          ]);
         });
       });
     });
   }, []);
+
+  const getImageName = (fullName) => {
+    return fullName.split(".")[0];
+  };
 
   return (
     <div className="App">
@@ -37,9 +47,12 @@ const upload = () => {
         onChange={(event) => setImageUpload(event.target.files[0])}
       />
       <button onClick={uploadImage}>Upload Image</button>
-      {imageUrls.map((url) => {
-        return <img src={url} />;
-      })}
+      {imageData.map(({ name, url }) => (
+        <div key={name}>
+          <img src={url} alt={name} />
+          <p>{name}</p>
+        </div>
+      ))}
     </div>
   );
 };
