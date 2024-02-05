@@ -71,25 +71,3 @@ const memes = () => {
 };
 
 export default memes;
-
-{
-  /* {Array.from({ length: 20 }, (_, index) => (       ))}
-          <div key={index} className="grid-item">
-            {memes[index] && (
-              <>
-                <img src={memes[index].image} alt={`Meme ${index + 1}`} />
-                {memes[index].category}
-              </>
-            )}
-          </div> */
-}
-{
-  /* {filteredMeme.map((meme, index) => {
-            return (
-              <div key={index} className="grid-item">
-                <img src={meme.image} alt={`meme ${index + 1}`} />
-                {meme.category}
-              </div>
-            );
-          })} */
-}

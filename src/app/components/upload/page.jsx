@@ -1,11 +1,33 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { storage } from "../firebase/firebase";
+import { ref, uploadBytes } from "firebase/storage";
 
 const upload = () => {
+  const [imageUpload, setImageUpload] = useState(null);
+
+  const uploadImage = () => {
+    if (imageUpload == null) return;
+    const imageRef = ref(storage, `images/${imageUpload.name}`);
+    uploadBytes(imageRef, imageUpload)
+      // .then(() => {
+      //   alert("image uploaded");
+      // });
+
+      .then(() => {
+        alert("Image uploaded successfully");
+      })
+      .catch((error) => {
+        console.error("Error uploading image:", error);
+      });
+  };
   return (
-    <div className="mt-52 mb-10">
-      <h1 class="font-bold text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gray-800 mb-6 ">
-        Simplifying Grid Creation with Array.from in Web Development
-      </h1>
+    <div className="">
+      <input
+        type="file"
+        onChange={(event) => setImageUpload(event.target.files[0])}
+      />
+      <button onClick={uploadImage}>Upload Image</button>
     </div>
   );
 };
