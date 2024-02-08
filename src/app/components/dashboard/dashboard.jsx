@@ -1,4 +1,3 @@
-// pages/index.js
 import DashboardLayout from "../dashboardLayout/dashboardLayout";
 import DashboardButton from "../DashboardButton/page";
 
