@@ -16,6 +16,14 @@ body {
   color: #fff;
   padding: 20px;
   text-align: center;
+  width: 200px;
+  height: 210px;
+}
+
+img {
+  width: 200px;
+  height: 120px;
+  /* bottom: 10px; */
 }
 
 @media screen and (max-width: 768px) {
