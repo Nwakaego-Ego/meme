@@ -96,26 +96,3 @@ const Memes = () => {
 };
 
 export default Memes;
-
-// const memesData = [
-//   { image: "/catchup.png", category: "football" },
-//   { image: "/emoji.webp", category: "score" },
-//   { image: "/football.jpg", category: "cooking" },
-//   { image: "/guy.png", category: "win" },
-//   { image: "/catchup.png", category: "clean_sheet" },
-//   { image: "/emoji.webp", category: "goal" },
-//   { image: "/football.jpg", category: "offside" },
-//   { image: "/guy.png", category: "missed" },
-//   { image: "/catchup.png", category: "kill" },
-//   { image: "/emoji.webp", category: "toast" },
-//   { image: "/football.jpg", category: "tears" },
-//   { image: "/guy.png", category: "back_your_bag" },
-//   { image: "/catchup.png", category: " penalty" },
-//   { image: "/emoji.webp", category: "shot" },
-//   { image: "/football.jpg", category: "plaster" },
-//   { image: "/guy.png", category: "no_gree_gor_anybody" },
-//   { image: "/catchup.png", category: "VAR" },
-//   { image: "/emoji.webp", category: "cup" },
-//   { image: "/football.jpg", category: "banter" },
-//   { image: "/guy.png", category: "cook" },
-// ];

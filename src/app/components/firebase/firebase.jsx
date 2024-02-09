@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 
@@ -11,6 +10,5 @@ const firebaseConfig = {
   appId: "1:551128543925:web:ebe92deb84006e3f6ec4fc",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app);
