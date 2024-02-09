@@ -1,5 +1,5 @@
 import DashboardLayout from "../dashboardLayout/dashboardLayout";
-import DashboardButton from "../DashboardButton/page";
+import DashboardButton from "../dashboardButton/dashboard";
 
 const Dashboard = () => {
   return (
