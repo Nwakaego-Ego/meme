@@ -45,6 +45,7 @@ const Upload = () => {
         <input
           type="file"
           id="myFileInput"
+          accept="image/*"
           onChange={(event) => setImageUpload(event.target.files[0])}
           className="file-input"
         />
