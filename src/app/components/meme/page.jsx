@@ -42,8 +42,8 @@ const Memes = () => {
   });
 
   return (
-    <div className="bg-yellow-500 min-h-screen text-white p-4">
-      <div className="  mx-auto">
+    <div className="bg-yellow-500 min-h-screen text-white p-4 max-w-full">
+      <div className=" max-w-4xl mx-auto">
         <div className="mb-10 mt-10 flex flex-col sm:flex-row justify-center">
           <input
             type="text"
