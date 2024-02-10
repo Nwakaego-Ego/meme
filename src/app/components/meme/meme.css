@@ -30,4 +30,18 @@ img {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  img {
+    width: 130px;
+    height: 100px;
+    border-radius: 8px;
+  }
+  .grid-item {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    height: 190px;
+    border-radius: 8px;
+  }
 }
