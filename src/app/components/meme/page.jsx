@@ -82,7 +82,7 @@ const Memes = () => {
               <span className="mb-4">Loading</span>
               <div className="w-16 h-1 bg-red-500 rounded-full"></div>
               <span className="mt-4 text-sm text-gray-600">
-                In a few seconds...
+                In a few seconds.........
               </span>
             </div>
           )}
