@@ -79,10 +79,10 @@ const Memes = () => {
             ))
           ) : (
             <div className="error-message flex flex-col items-center justify-center text-center text-4xl font-bold text-red-500 p-8 bg-gray-200 rounded-md shadow-md">
-              <span className="mb-4">Loading</span>
+              <span className="mb-4">Loading memes</span>
               <div className="w-16 h-1 bg-red-500 rounded-full"></div>
               <span className="mt-4 text-sm text-gray-600">
-                In a few seconds.........
+                In a few seconds...
               </span>
             </div>
           )}
